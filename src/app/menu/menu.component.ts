@@ -20,6 +20,7 @@ import { flyInOut, expand } from '../animations/app.animation';
 export class MenuComponent implements OnInit {
 
   dishes: Dish[];
+
   errMess: string;
 
   selectedDish: Dish;
@@ -28,13 +29,16 @@ export class MenuComponent implements OnInit {
     @Inject('baseURL') private baseURL) { }
 
   ngOnInit() {
-    this.dishService.getDishes()
-      .subscribe(dishes => this.dishes = dishes,
-        errmess => this.errMess = <any>errmess);
+    //this.dishService.getDishes()
+      //.subscribe(dishes => this.dishes = dishes,
+        //errmess => this.errMess = <any>errmess);
+        this.dishService.getDishes().subscribe(dishes => this.dishes = dishes);
   }
 
   onSelect(dish: Dish) {
+    //this.selectedDish = dish;
     this.selectedDish = dish;
+
   }
 
 }

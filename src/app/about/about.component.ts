@@ -26,9 +26,10 @@ export class AboutComponent implements OnInit {
     @Inject('baseURL') private baseURL) { }
 
   ngOnInit() {
-    this.leaderservice.getLeaders()
-      .subscribe(leaders => this.leaders = leaders,
-        errmess => this.errMess = <any>errmess);
+    //this.leaderservice.getLeaders()
+      //.subscribe(leaders => this.leaders = leaders,
+        //errmess => this.errMess = <any>errmess);
+        this.leaders = this.leaderservice.getLeaders();
   }
 
 }
