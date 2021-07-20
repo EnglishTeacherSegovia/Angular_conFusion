@@ -6,7 +6,7 @@ export const DISHES: Dish[] = [
   {
       _id: '0',
       name: 'Uthappizza',
-      image: '/src/assets/images/uthappizza.png',
+      image: '/images/uthappizza.png',
       category: 'mains',
       featured: true,
       label: 'Hot',
